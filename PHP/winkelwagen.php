@@ -98,8 +98,10 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winkelwagen</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="toets.css">
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="../CSS/Toets.css">
+    <link rel="stylesheet" href="../CSS/custom.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/style_create.css">
 </head>
 <body>
 <div class="container mt-5">
@@ -134,7 +136,7 @@ $conn->close();
                     <div class="card h-100">
                         <div class="game-image">
                             <?php if (!empty($game['afbeelding'])): ?>
-                                <img src="fotos/<?= htmlspecialchars($game['afbeelding']) ?>" alt="<?= htmlspecialchars($game['game']) ?>" class="img-fluid w-100 h-100" style="object-fit:cover;">
+                                <img src="../fotos/<?= htmlspecialchars($game['afbeelding']) ?>" alt="<?= htmlspecialchars($game['game']) ?>" class="img-fluid w-100 h-100" style="object-fit:cover;">
                             <?php else: ?>
                                 <span class="text-muted"><?= htmlspecialchars($game['game']) ?></span>
                             <?php endif; ?>

@@ -2,8 +2,8 @@
 try {
     session_start();
 
-require __DIR__ . '/vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+require '../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable("../");
 $dotenv->load();
 
     $conn = new mysqli("localhost", "root", "root", "eindproduct");
@@ -18,8 +18,10 @@ $dotenv->load();
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>GameStop Beheer</title>
         <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
-        <link rel='stylesheet' href='toets.css'>
-        <link rel='stylesheet' href='index.css'>
+        <link rel='stylesheet' href='../CSS/Toets.css'>
+        <link rel='stylesheet' href='../CSS/index.css'>
+        <link rel='stylesheet' href='../CSS/custom.css'>
+        <link rel='stylesheet' href='../CSS/style_create.css'>
     </head>
     <body>";
 
@@ -124,7 +126,7 @@ $dotenv->load();
                             <div class='position-relative'>
                                 <div class='game-image'>";
                 if (!empty($product['afbeelding'])) {
-                    echo "<img src='fotos/" . $product['afbeelding'] . "' alt='" . htmlspecialchars($product['game']) . "' class='img-fluid w-100 h-100' style='object-fit:cover;'>";
+                    echo "<img src='../fotos/" . $product['afbeelding'] . "' alt='" . htmlspecialchars($product['game']) . "' class='img-fluid w-100 h-100' style='object-fit:cover;'>";
                 } else {
                     echo "<span class='text-muted'>" . htmlspecialchars($product['game']) . "</span>";
                 }

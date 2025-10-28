@@ -2,8 +2,8 @@
 //TODO make better
 session_start();
 
-require __DIR__ . '/vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+require '../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable("../");
 $dotenv->load();
 
 if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) {

@@ -3,8 +3,8 @@
 // Sessie starten
 session_start();
 
-require __DIR__ . '/vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+require '../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable("../");
 $dotenv->load();
 
 // Ingelogd?
@@ -98,7 +98,9 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn Account</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="toets.css">
+    <link rel="stylesheet" href="../CSS/Toets.css">
+    <link rel="stylesheet" href="../CSS/custom.css">
+    <link rel="stylesheet" href="../CSS/style_create.css">
     <style>
         .account-form-container {
             border-radius: 1rem;
